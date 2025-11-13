@@ -14,53 +14,43 @@
         android:id="@+id/imgLogo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@mipmap/ic_launcher"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/ic_launcher" />
 
     <!-- Welcome Text -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="Welcome to Android Development!"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp" />
+        android:textStyle="bold" />
 
     <!-- EditText for User Input -->
     <EditText
-        android:id="@+id/etUserName"
-        android:layout_width="match_parent"
+        android:id="@+id/etName"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/edit_text"
         android:hint="Enter your name"
-        android:layout_marginBottom="20dp" />
+        android:padding="10dp" />
 
     <!-- Click Me Button -->
     <Button
         android:id="@+id/btnClickMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Me"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="16dp"
+        android:text="Click Me" />
 
     <!-- Button to Go to Second Activity -->
-
     <Button
         android:id="@+id/btnGoToSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Go to Next Screen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnClickMe" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:text="Go to Next Screen" />
 
 </LinearLayout>

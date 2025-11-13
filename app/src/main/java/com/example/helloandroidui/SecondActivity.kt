@@ -1,8 +1,9 @@
 package com.example.helloandroidui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class SecondActivity : AppCompatActivity() {
 
@@ -12,11 +13,15 @@ class SecondActivity : AppCompatActivity() {
 
         val tvMessage: TextView = findViewById(R.id.tvMessage)
         val name = intent.getStringExtra("user_name")
+        val btnBack: Button = findViewById(R.id.btnBack)
 
         tvMessage.text = if (!name.isNullOrEmpty()) {
-            "Nice to meet you, $name!"
+            "Nice to meet you, $name! This is the second screen."
         } else {
             "This is the second screen."
+        }
+        btnBack.setOnClickListener {
+            finish()
         }
     }
 }

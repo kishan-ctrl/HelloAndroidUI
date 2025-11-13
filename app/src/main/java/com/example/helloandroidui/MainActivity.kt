@@ -1,11 +1,11 @@
-package com.example.helloandroidui
+package com.example.helloandroidui  // use your actual package
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.helloandroidui.R
 
 class MainActivity : AppCompatActivity() {
@@ -14,26 +14,28 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val etName: EditText = findViewById(R.id.etName)
         val btnClickMe: Button = findViewById(R.id.btnClickMe)
         val btnGoToSecond: Button = findViewById(R.id.btnGoToSecond)
-        val etUserName: EditText = findViewById(R.id.etUserName)
 
-        // Improvement 3: Personalized Toast with EditText
+        // Personalized Toast
         btnClickMe.setOnClickListener {
-            val userName = etUserName.text.toString()
-            if (userName.isNotEmpty()) {
-                Toast.makeText(this, "Hello $userName! Button clicked! 🎉", Toast.LENGTH_SHORT).show()
+            val name = etName.text.toString().trim()
+            val message = if (name.isNotEmpty()) {
+                "Hello, $name! Welcome to Android Development!"
             } else {
-                Toast.makeText(this, "Please enter your name first!", Toast.LENGTH_SHORT).show()
+                "Hello! Please enter your name."
             }
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         }
 
-
-
+        // Navigate to SecondActivity with Intent
         btnGoToSecond.setOnClickListener {
-            // Create an Intent to go from MainActivity -> SecondActivity
+            val name = etName.text.toString().trim()
             val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("user_name", name)
             startActivity(intent)
         }
+
     }
 }
