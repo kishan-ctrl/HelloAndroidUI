@@ -1,8 +1,8 @@
 package com.example.helloandroidui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class SecondActivity : AppCompatActivity() {
 
@@ -14,7 +14,7 @@ class SecondActivity : AppCompatActivity() {
         val name = intent.getStringExtra("user_name")
 
         tvMessage.text = if (!name.isNullOrEmpty()) {
-            "Nice to meet you, $name!"
+            "Nice to meet you, $name! This is the second screen."
         } else {
             "This is the second screen."
         }
