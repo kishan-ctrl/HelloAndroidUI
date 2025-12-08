@@ -1,5 +1,10 @@
 # 📱 HelloAndroidUI – Mobile Application Development  
-### Lab Activity 01 – Base App + Improved UI
+### Lab Activity 01 – Base App + Improved UI  
+
+**Student Information**  
+**Name:** Balakrishnan Krishanth  
+**Student ID:** 11212  
+**Subject:** Mobile Application Development  
 
 This repository contains the implementation of **Lab Activity 01**, demonstrating Android UI development using XML layouts, user interaction, Intents, Activity navigation, themes, and UI enhancements.
 
